@@ -27,7 +27,7 @@ orionRobotPackagesArray=("Cafe_DeskService" "Cafe_Leading" "Cafe_Portal" "Cafe_W
 "OverSea_Leading" "OverSea_DistributeFood")
 orionRobotPackagesRootDirSuffix=app/source/res
 
-languageDir=D:/LuckiBotROMNew/id
+languageDir=D:/LuckiBotROMNew/in
 
 for file in `ls $languageDir`;
 do
@@ -38,17 +38,17 @@ do
         for a in ${orionRobotSystemArray[*]};
         do
           if [[ $robotSystemFile == $a* ]]; then
-            destDir="$orionRobotSystemRootDir/$a/$orionRobotSystemRootDirSuffix/values-id"
+            destDir="$orionRobotSystemRootDir/$a/$orionRobotSystemRootDirSuffix/values-in"
             if [ ! -d "$destDir" ]; then
               mkdir $destDir
             fi
             if [[ $robotSystemFile == $a-strings* ]]; then
               echo $robotSystemFile
-              mv $languageDir/RobotSystem/$robotSystemFile $orionRobotSystemRootDir/$a/$orionRobotSystemRootDirSuffix/values-id/strings.xml
+              mv $languageDir/RobotSystem/$robotSystemFile $orionRobotSystemRootDir/$a/$orionRobotSystemRootDirSuffix/values-in/strings.xml
             elif [[ $robotSystemFile == $a-arrays* ]]; then
-              mv $languageDir/RobotSystem/$robotSystemFile $orionRobotSystemRootDir/$a/$orionRobotSystemRootDirSuffix/values-id/arrays.xml
+              mv $languageDir/RobotSystem/$robotSystemFile $orionRobotSystemRootDir/$a/$orionRobotSystemRootDirSuffix/values-in/arrays.xml
             elif [[ $robotSystemFile == FirstConfig-values-strings* ]]; then
-              mv $languageDir/RobotSystem/$robotSystemFile $orionRobotSystemRootDir/$a/$orionRobotSystemRootDirSuffix/values-id/strings.xml
+              mv $languageDir/RobotSystem/$robotSystemFile $orionRobotSystemRootDir/$a/$orionRobotSystemRootDirSuffix/values-in/strings.xml
             fi
           fi
           done
@@ -59,13 +59,13 @@ do
         for a in ${orionRobotServiceArray[*]};
         do
           if [[ $robotServiceFile == $a* ]]; then
-            destDir="$orionRobotServiceRootDir/$a/$orionRobotServiceRootDirSuffix/values-id"
+            destDir="$orionRobotServiceRootDir/$a/$orionRobotServiceRootDirSuffix/values-in"
             if [ ! -d "$destDir" ]; then
               mkdir $destDir
             fi
             if [[ $robotServiceFile == $a-strings* ]]; then
               echo $robotServiceFile
-              mv $languageDir/RobotService/$robotServiceFile $orionRobotServiceRootDir/$a/$orionRobotServiceRootDirSuffix/values-id/strings.xml
+              mv $languageDir/RobotService/$robotServiceFile $orionRobotServiceRootDir/$a/$orionRobotServiceRootDirSuffix/values-in/strings.xml
             fi
           fi
           done
@@ -73,39 +73,39 @@ do
   elif [[ $file == RobotSettings ]]; then
     for robotSettingsFile in `ls $languageDir/RobotSettings`;
     do
-      destDir="$orionRobotSettingsRootDir/values-id"
+      destDir="$orionRobotSettingsRootDir/values-in"
       if [ ! -d "$destDir" ]; then
         mkdir $destDir
       fi
-      destDir1="$orionRobotSettingsRootDir/xml-id"
+      destDir1="$orionRobotSettingsRootDir/xml-in"
       if [ ! -d "$destDir1" ]; then
         mkdir $destDir1
       fi
       if [[ $robotSettingsFile == RobotSettings-values-strings* ]]; then
         echo $robotSettingsFile
-        mv $languageDir/RobotSettings/$robotSettingsFile $orionRobotSettingsRootDir/values-id/strings.xml
+        mv $languageDir/RobotSettings/$robotSettingsFile $orionRobotSettingsRootDir/values-in/strings.xml
       elif [[ $robotSettingsFile == RobotSettings-xml-time_zone* ]]; then
         echo $robotSettingsFile
-        mv $languageDir/RobotSettings/$robotSettingsFile $orionRobotSettingsRootDir/xml-id/time_zone.xml
+        mv $languageDir/RobotSettings/$robotSettingsFile $orionRobotSettingsRootDir/xml-in/time_zone.xml
       fi
       done
   elif [[ $file == RobotPlatform ]]; then
     for robotPlatformFile in `ls $languageDir/RobotPlatform`;
     do
-      destDir="$orionRobotPlatformAppRootDir/values-id"
+      destDir="$orionRobotPlatformAppRootDir/values-in"
       if [ ! -d "$destDir" ]; then
         mkdir $destDir
       fi
-      destDir1="$orionRobotPlatformRootDir/values-id"
+      destDir1="$orionRobotPlatformRootDir/values-in"
       if [ ! -d "$destDir1" ]; then
         mkdir $destDir1
       fi
       if [[ $robotPlatformFile == RobotPlatform-app-strings* ]]; then
         echo $robotPlatformFile
-        mv $languageDir/RobotPlatform/$robotPlatformFile $orionRobotPlatformAppRootDir/values-id/strings.xml
+        mv $languageDir/RobotPlatform/$robotPlatformFile $orionRobotPlatformAppRootDir/values-in/strings.xml
       elif [[ $robotPlatformFile == RobotPlatform-platform-strings* ]]; then
         echo $robotPlatformFile
-        mv $languageDir/RobotPlatform/$robotPlatformFile $orionRobotPlatformRootDir/values-id/string.xml
+        mv $languageDir/RobotPlatform/$robotPlatformFile $orionRobotPlatformRootDir/values-in/string.xml
       fi
       done
     elif [[ $file == RobotPackages ]]; then
@@ -115,7 +115,7 @@ do
         do
           if [[ $robotPackagesFile == $a.* ]]; then
             echo $robotPackagesFile $a;
-            mv $languageDir/RobotPackages/$robotPackagesFile $orionRobotPackagesRootDir/$a/$orionRobotPackagesRootDirSuffix/id.js
+            mv $languageDir/RobotPackages/$robotPackagesFile $orionRobotPackagesRootDir/$a/$orionRobotPackagesRootDirSuffix/in.js
           fi
           done
       done
