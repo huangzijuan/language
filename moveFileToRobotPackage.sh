@@ -26,15 +26,15 @@ do
 for name in `ls $languageDir`;
 do
   echo $name;
-#  for file in `ls $languageDir/$name`;
-#  do
-#    for a in ${orionRobotPackagesArray[*]};
-#    do
-#      if [[ $file == $a.* ]]; then
-#        echo $file $a;
-#        mv $languageDir/$name/$file $orionRobotPackagesRootDir/$a/$orionRobotPackagesRootDirSuffix/$name.js
-#      fi
-#      done
-#    done
+  for file in `ls $languageDir/$name`;
+  do
+    for a in ${orionRobotPackagesArray[*]};
+    do
+      if [[ $file == $a.* ]]; then
+        echo $file $a;
+        mv $languageDir/$name/$file $orionRobotPackagesRootDir/$a/$orionRobotPackagesRootDirSuffix/$name.js
+      fi
+      done
+    done
   done
 
