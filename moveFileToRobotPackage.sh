@@ -7,13 +7,15 @@ orionRobotPackagesArray=("Cafe_DeskService" "Cafe_Leading" "Cafe_Portal" "Cafe_W
 "OverSea_Leading" "OverSea_DistributeFood")
 orionRobotPackagesRootDirSuffix=app/source/res
 
-languageDir=D:/LockiBotOPKNew
+languageDir=D:/LuckiBotOPKNew
 
 #文件夹名称预处理
 for name in `ls $languageDir`;
 do
   if [[ $name == ko ]]; then
-    mv $languageDir/ko $languageDir/ko-rKR
+    mv $languageDir/ko $languageDir/koKR
+  elif [[ $name == no ]]; then
+    mv $languageDir/no $languageDir/nb
   elif [[ $name == zh-CN ]]; then
     mv $languageDir/zh-CN $languageDir/zhCN
   elif [[ $name == zh-HK ]]; then

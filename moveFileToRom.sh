@@ -1,27 +1,24 @@
 #!/bin/sh
 echo 'start'
 
+#orionRobotServiceRootDir=D:/Orion/RobotService
+#orionRobotServiceArray=("SpeechService-orion")
+#orionRobotServiceRootDirSuffix=app/src/main/res
+
+
 orionRobotSystemRootDir=D:/Orion/RobotSystem
-orionRobotSystemArray=("MapTool")
+orionRobotSystemArray=("FirstConfig" "Home" "Inspection" "MapTool" "VideoCall")
 orionRobotSystemRootDirSuffix=app/src/main/res
 
-#orionRobotSystemRootDir=D:/Orion/RobotSystem
-#orionRobotSystemArray=("FirstConfig" "Home" "Inspection" "MapTool" "VideoCall")
-#orionRobotSystemRootDirSuffix=app/src/main/res
-#
-#orionRobotSystemRootDir=D:/Orion/RobotSystem
-#orionRobotSystemArray=("FirstConfig" "Home" "Inspection" "MapTool" "VideoCall")
-#orionRobotSystemRootDirSuffix=app/src/main/res
-#
-#orionRobotServiceRootDir=D:/Orion/RobotService
-#orionRobotServiceArray=("CoreService" "HardwareService" "HeadService" "NavigationService" "NavigationService-orion"
-# "RemoteControlService" "SpeechService-orion" "UploadService-orion")
-#orionRobotServiceRootDirSuffix=app/src/main/res
-#
-#orionRobotSettingsRootDir=D:/Orion/RobotSettings/app/src/main/res
-#
-#orionRobotPlatformAppRootDir=D:/Orion/RobotPlatform/app/src/main/res
-#orionRobotPlatformRootDir=D:/Orion/RobotPlatform/platform/src/main/res
+orionRobotServiceRootDir=D:/Orion/RobotService
+orionRobotServiceArray=("CoreService" "HardwareService" "HeadService" "NavigationService"
+ "RemoteControlService" "SpeechService-orion" "UploadService-orion")
+orionRobotServiceRootDirSuffix=app/src/main/res
+
+orionRobotSettingsRootDir=D:/Orion/RobotSettings/app/src/main/res
+
+orionRobotPlatformAppRootDir=D:/Orion/RobotPlatform/app/src/main/res
+orionRobotPlatformRootDir=D:/Orion/RobotPlatform/platform/src/main/res
 
 
 languageDir=D:/LuckiBotROMNew
@@ -31,8 +28,8 @@ for name in `ls $languageDir`;
 do
   if [[ $name == id ]]; then
     mv $languageDir/id $languageDir/in
-  elif [[ $name == ko ]]; then
-    mv $languageDir/ko $languageDir/ko-rKR
+  elif [[ $name == no ]]; then
+    mv $languageDir/no $languageDir/nb
   elif [[ $name == zh-CN ]]; then
     mv $languageDir/zh-CN $languageDir/zh
   elif [[ $name == zh-HK ]]; then
@@ -121,7 +118,7 @@ do
           mv $languageDir/$name/RobotPlatform/$robotPlatformFile $orionRobotPlatformAppRootDir/values-$name/strings.xml
         elif [[ $robotPlatformFile == RobotPlatform-platform-strings* ]]; then
           echo $robotPlatformFile
-          mv $languageDir/$name/RobotPlatform/$robotPlatformFile $orionRobotPlatformRootDir/values-$name/string.xml
+          mv $languageDir/$name/RobotPlatform/$robotPlatformFile $orionRobotPlatformRootDir/values-$name/strings.xml
         fi
         done
     fi

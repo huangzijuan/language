@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c03825b5-eed6-49bf-8534-412f388f0efc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/moveFileToRobotPackage.sh" beforeDir="false" afterPath="$PROJECT_DIR$/moveFileToRobotPackage.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/moveFileToRom.sh" beforeDir="false" afterPath="$PROJECT_DIR$/moveFileToRom.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moveFileToRomId.sh" beforeDir="false" afterPath="$PROJECT_DIR$/moveFileToRomId.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +53,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
